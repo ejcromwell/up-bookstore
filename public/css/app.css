@@ -10471,6 +10471,15 @@ a.text-dark:focus {
   }
 }
 
+.navbar-login {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar-login .btn {
+  float: right;
+}
+
 .new-releases-title {
   display: block;
   width: 100%;
@@ -10574,5 +10583,68 @@ a.text-dark:focus {
   to {
     opacity: 1;
   }
+}
+
+.book-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .book-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    width: 100%;
+  }
+}
+
+.book-row-id {
+  width: 20px;
+  font-size: 22px;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .book-row-id {
+    width: 30px;
+    padding-right: 10px;
+  }
+}
+
+.book-row-name {
+  color: #111;
+  font-size: 22px;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .book-row-name {
+    width: 500px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .book-row-name {
+    width: 800px;
+  }
+}
+
+.book-row-delete,
+.book-row-edit {
+  width: 100px;
+  padding: 5px;
 }
 
