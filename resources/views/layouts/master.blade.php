@@ -4,8 +4,21 @@
 
 <main class="container pt-3">
 
-    <?php dd($books); ?>
-    main content here
+    <section class="new-releases pt-5">
+
+        <h2 class="new-releases-title">New Releases</h2>
+
+        <div class="book-display">
+
+            @foreach ($books as $book)
+
+                @include('partials.book')
+
+            @endforeach
+
+        </div>
+
+    </section>
 
 </main>
 
