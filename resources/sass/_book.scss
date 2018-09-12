@@ -1,34 +1,42 @@
 .book {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 300px;
   opacity: 0;
   animation: bookOpacity .8s ease-out 0s 1 normal forwards;
-  padding: 5px;
+  padding: 20px;
   margin-bottom: 1%;
-  background-image: linear-gradient(to left, lighten(#f0ead6, 5%) 0%, lighten(#f0ead6, 5%) 50%, #f0ead6 50%,#f0ead6 100%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
+  z-index: 1;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    width: 49%;
+  }
+}
+
+.book-content {
+  @include media-breakpoint-up(md) {
+    width: 60%;
+    padding-left: 20px;
+  }
+}
+
+.book-name {
+  color: $dark-text;
+  font-size: 22px;
+}
+
+.book-price {
+  color: $dark-text;
+  font-size: 16px;
+}
+
+.book-img {
   @include media-breakpoint-up(md) {
     width: 40%;
   }
-  @include media-breakpoint-up(lg) {
-    width: 30%;
-  }
-}
-
-.book-top {
-  align-self: flex-start;
-  width: 100%;
-  text-align: left;
-}
-
-.book-value {
-  align-self: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  transform: rotate(-50deg);
 }
 
 @keyframes bookOpacity {
