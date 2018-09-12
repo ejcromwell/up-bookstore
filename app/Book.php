@@ -18,6 +18,12 @@ class Book extends Model
         'theme',
     ];
 
+    /**
+     * Get all book record from DB
+     *
+     * @return  var    All Book records
+     *
+     **/
     public function get_all_books()
     {
         $output = DB::table('books')->get();
@@ -25,6 +31,13 @@ class Book extends Model
         return $output;
     }
 
+    /**
+     * Get single book record from DB
+     *
+     * @var int    book id
+     * @return  var    Book record
+     *
+     **/
     public function get_single_book($id)
     {
 
@@ -32,11 +45,38 @@ class Book extends Model
         return $output;
     }
 
+    /**
+     * Delete book record from DB
+     *
+     * @var int    book id
+     * @return  bool
+     *
+     **/
     public function delete_book($id)
     {
-
         $result = DB::table('books')->delete($id);
+        return $result;
+    }
 
+    /**
+     * Save new book instance to the DB
+     *
+     * @var form request info
+     * @return  bool
+     *
+     **/
+    public function add_book($request)
+    {
+
+        $book = new Book;
+        $book->name   = request('name');
+        $book->price  = request('price');
+        $book->cover  = request('cover');
+        $book->colour = request('colour');
+        $book->size   = request('size');
+        $book->theme  = request('theme');
+
+        $result = $book->save();
         return $result;
     }
 

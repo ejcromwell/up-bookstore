@@ -36,17 +36,10 @@ class AdminController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Book $book, Request $request)
     {
-        $book = new Book;
-        $book->name   = request('name');
-        $book->price  = request('price');
-        $book->cover  = request('cover');
-        $book->colour = request('colour');
-        $book->size   = request('size');
-        $book->theme  = request('theme');
 
-        $result = $book->save();
+        $result = $book->add_book($request);
 
         if ($result === true) {
 
@@ -63,32 +56,10 @@ class AdminController extends Controller
      */
     public function show(Book $book, $id)
     {
+
         $book = $book->get_single_book($id);
 
         return view('admin.show', compact('book'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**

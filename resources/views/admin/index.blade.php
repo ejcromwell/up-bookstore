@@ -27,6 +27,5 @@
 
 </main>
 
-
 @include('layouts.footer')
 
