@@ -14,7 +14,7 @@
             <form method="POST" action="{{ route('admin.destroy', $book->id) }}">
                 {{ csrf_field() }}
                 <input name="_method" type="hidden" value="DELETE">
-                <button type="submit" class="btn btn-danger">Submit</button>
+                <input type="submit" class="btn btn-danger" id="delete" value="DELETE"/>
             </form>
 
         </div>
