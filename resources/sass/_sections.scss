@@ -1,0 +1,15 @@
+.new-releases-title {
+  display: block;
+  width: 100%;
+}
+
+.book-display {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}

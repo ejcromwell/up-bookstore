@@ -1,0 +1,45 @@
+.book {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  opacity: 0;
+  animation: bookOpacity .8s ease-out 0s 1 normal forwards;
+  padding: 20px;
+  margin-bottom: 1%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
+  z-index: 1;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    width: 49%;
+  }
+}
+
+.book-content {
+  @include media-breakpoint-up(md) {
+    width: 60%;
+    padding-left: 20px;
+  }
+}
+
+.book-name {
+  color: $dark-text;
+  font-size: 22px;
+}
+
+.book-price {
+  color: $dark-text;
+  font-size: 16px;
+}
+
+.book-img {
+  @include media-breakpoint-up(md) {
+    width: 40%;
+  }
+}
+
+@keyframes bookOpacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
