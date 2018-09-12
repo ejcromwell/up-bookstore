@@ -6,8 +6,8 @@
     <div class="book-name">
       {{ $book->name }}
     </div>
-    <div class="book-price">
-      {{ $book->price }}
+    <div class="book-price pt-1">
+      <?= ($book->price) ? '£' . $book->price: ''; ?>
     </div>
   </div>
  </div>

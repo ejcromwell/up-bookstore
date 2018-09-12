@@ -1,12 +1,12 @@
 .book-row {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  max-width: 300px;
   border-bottom: 1px solid rgba( 0, 0, 0, .1);
   @include media-breakpoint-up(md) {
     flex-direction: row;
-    flex: 0 1 auto;
-    width: 100%;
+    flex: 1 1 auto;
+    max-width: 100%;
   }
 }
 
@@ -33,9 +33,11 @@
   }
 }
 
-.book-row-delete,
 .book-row-edit {
   width: 100px;
   padding: 5px;
+  .btn {
+    min-width: 150px;
+  }
 }
 
