@@ -8,11 +8,11 @@
 
         <h2 class="new-releases-title">New Releases</h2>
 
-        <div class="book-display">
+        <div class="book-display pt-3">
 
             @foreach ($books as $book)
 
-                @include('partials.book')
+                @include('book.partials.card')
 
             @endforeach
 

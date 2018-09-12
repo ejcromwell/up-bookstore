@@ -18,6 +18,6 @@ Route::get('/', function () {
 
 Route::get('/', 'BookController@index');
 Route::get('/admin', 'AdminController@index');
-Route::get('/admin/{id}', 'AdminController@show');
-Route::get('/admin/add', 'AdminController@dcreate');
-Route::get('/admin/delete/{id}', 'AdminController@destroy');
+Route::get('/admin/{id}/show', 'AdminController@show');
+Route::get('/admin/create', 'AdminController@create');
+Route::get('/admin/{id}/delete', 'AdminController@destroy');

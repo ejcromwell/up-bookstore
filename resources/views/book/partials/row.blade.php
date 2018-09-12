@@ -6,7 +6,7 @@
       {{ $book->name }}
     </div>
     <div class="book-row-edit">
-      <a class="btn btn-info" href="/admin/{{ $book->id }}">EDIT</a>
+      <a class="btn btn-info" href="/admin/{{ $book->id }}/show">EDIT</a>
     </div>
     <div class="book-row-delete">
     </div>

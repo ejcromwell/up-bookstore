@@ -6,11 +6,11 @@
 
     <section class="pt-5">
 
-        <h2 >Edit Book Details</h2>
+        <h2 >Add A New Book</h2>
 
-        <div class="single-book pt-5">
+        <div class=" pt-5">
 
-            @include('book.partials.admin')
+          @include('book.partials.form')
 
         </div>
 

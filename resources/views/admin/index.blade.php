@@ -12,7 +12,7 @@
 
             @foreach ($books as $book)
 
-                @include('partials.book-row')
+                @include('book.partials.row')
 
             @endforeach
 
