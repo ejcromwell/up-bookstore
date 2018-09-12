@@ -10,7 +10,13 @@
             {{ $book->price }}
         </div>
         <div class="book-delete">
-            <a class="btn btn-danger" href="/admin/delete/{{ $book->id }}">DELETE</a>
+
+            <form method="POST" action="{{ route('admin.destroy', $book->id) }}">
+                {{ csrf_field() }}
+                <input name="_method" type="hidden" value="DELETE">
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+
         </div>
     </div>
  </div>

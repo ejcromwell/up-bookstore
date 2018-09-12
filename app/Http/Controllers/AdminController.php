@@ -102,9 +102,7 @@ class AdminController extends Controller
         $result = $book->delete_book($id);
 
         if ($result === 1) {
-
-            $books = $book->get_all_books();
-            return view('admin.index', compact('books'));
+            return redirect()->action('AdminController@index');
         }
     }
 }

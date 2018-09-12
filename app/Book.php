@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
+
     protected $fillable = [
         'name',
         'price',
@@ -16,7 +17,6 @@ class Book extends Model
         'size',
         'theme',
     ];
-
 
     public function get_all_books()
     {
