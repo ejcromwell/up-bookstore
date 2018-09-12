@@ -1,16 +1,29 @@
-<form>
+<form method="POST" action="/admin">
+    {{ csrf_field() }}
     <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Book Name">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        <label for="price">Price</label>
+        <input type="number" name="price" class="form-control" placeholder="10.00">
     </div>
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <div class="form-group">
+        <label for="cover">Cover</label>
+        <input type="url" name="cover" class="form-control" placeholder="http://full/image/url.com">
     </div>
+    <div class="form-group">
+        <label for="colour">Colour</label>
+        <input type="text" name="colour" class="form-control" placeholder="Book colour">
+    </div>
+    <div class="form-group">
+        <label for="size">Size</label>
+        <input type="text" name="size" class="form-control" placeholder="Book Size">
+    </div>
+    <div class="form-group">
+        <label for="theme">Theme</label>
+        <input type="text" name="theme" class="form-control" placeholder="Book Theme">
+    </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
