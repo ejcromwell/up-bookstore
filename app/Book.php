@@ -8,6 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
+    protected $fillable = [
+        'name',
+        'price',
+        'cover',
+        'colour',
+        'size',
+        'theme',
+    ];
+
+
     public function get_all_books()
     {
         $output = DB::table('books')->get();

@@ -11,14 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::get('/', 'BookController@index');
+
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/{id}/show', 'AdminController@show');
 Route::get('/admin/create', 'AdminController@create');
 Route::post('/admin', 'AdminController@store');
-Route::post('/admin/{id}/delete', 'AdminController@destroy');
+Route::get('/admin/delete/{id}', 'AdminController@destroy');

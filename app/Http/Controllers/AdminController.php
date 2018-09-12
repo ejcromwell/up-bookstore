@@ -38,7 +38,21 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
+        $book = new Book;
+        $book->name   = request('name');
+        $book->price  = request('price');
+        $book->cover  = request('cover');
+        $book->colour = request('colour');
+        $book->size   = request('size');
+        $book->theme  = request('theme');
+
+        $result = $book->save();
+
+        if ($result === true) {
+
+            $books = $book->get_all_books();
+            return view('admin.index', compact('books'));
+        }
     }
 
     /**
