@@ -2,11 +2,11 @@
     {{ csrf_field() }}
     <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" name="name" class="form-control" placeholder="Book Name">
+        <input type="text" name="name" class="form-control" placeholder="Book Name" required>
     </div>
     <div class="form-group">
         <label for="price">Price</label>
-        <input type="number" name="price" class="form-control" placeholder="10.00">
+        <input type="number" name="price" class="form-control" placeholder="10.00" required>
     </div>
     <div class="form-group">
         <label for="cover">Cover</label>
