@@ -3,6 +3,7 @@
 namespace App;
 
 use DB;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
@@ -13,4 +14,21 @@ class Book extends Model
 
         return $output;
     }
+
+    public function get_single_book($id)
+    {
+
+        $output = DB::table('books')->find($id);
+        return $output;
+    }
+
+    public function delete_book($id)
+    {
+
+        $books = DB::table('books')->get();
+        DB::table('books')->delete($id);
+
+        return view('layouts.admin', compact('books'));
+    }
+
 }

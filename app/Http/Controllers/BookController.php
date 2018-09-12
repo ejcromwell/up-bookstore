@@ -13,12 +13,4 @@ class BookController extends Controller
 
         return view('layouts.master', compact('books'));
     }
-
-    public function admin(Book $book)
-    {
-
-        $books = $book->get_all_books();
-
-        return view('layouts.admin', compact('books'));
-    }
 }

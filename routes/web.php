@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 
 Route::get('/', 'BookController@index');
-Route::get('/admin', 'BookController@admin');
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/{id}', 'AdminController@show');
