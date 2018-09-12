@@ -25,10 +25,9 @@ class Book extends Model
     public function delete_book($id)
     {
 
-        $books = DB::table('books')->get();
-        DB::table('books')->delete($id);
+        $result = DB::table('books')->delete($id);
 
-        return view('layouts.admin', compact('books'));
+        return $result;
     }
 
 }

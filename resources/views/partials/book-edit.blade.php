@@ -10,7 +10,7 @@
             {{ $book->price }}
         </div>
         <div class="book-delete">
-            <a class="btn btn-danger" href="/delete/{{ $book->id }}">DELETE</a>
+            <a class="btn btn-danger" href="/admin/delete/{{ $book->id }}">DELETE</a>
         </div>
     </div>
  </div>

@@ -21,4 +21,16 @@ class AdminController extends Controller
 
         return view('admin.show', compact('book'));
     }
+
+    public function delete(Book $book, $id)
+    {
+        $result = $book->delete_book($id);
+
+        if ($result === 1) {
+
+            $books = $book->get_all_books();
+            return view('admin.index', compact('books'));
+        }
+
+    }
 }
