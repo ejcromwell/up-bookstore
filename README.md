@@ -27,10 +27,3 @@ There is only HTML form validation. With more time I would use Laravel form vali
 
 The views are not optimised for the Blade templating language. They could be much more efficient with less code repetition.
 
-**Question b)**
-
-I am not familiar with fuzzy text searching across multiple data tables. I understand that trying to perform this with pure MySQL %LIKE% queries would be prohibitively slow.
-
-I am not at all familiar with this method but something along the lines of pulling all the required fields from the Database and placing in a file or single database table and then searching the file would be more efficient in returning the fastest results.
-
-*Both .scss or .js files should already be compiled. However if there are issues with this, please run `npm install` and then `npm run production`*
